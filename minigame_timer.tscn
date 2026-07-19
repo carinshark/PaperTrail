@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cpxgewtqppv4y"]
+
+[ext_resource type="Script" uid="uid://b8y2w6n70fv4b" path="res://minigame_timer.gd" id="1_4ajrp"]
+
+[node name="MinigameTimer" type="Node2D" unique_id=944453906]
+script = ExtResource("1_4ajrp")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1007435904]
+offset_right = 35.0
+offset_bottom = 24.0
+text = "0:0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="." unique_id=575671596]
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://3isrgl6t1gse"]
+
+[ext_resource type="Script" uid="uid://cspjlh6xalitt" path="res://stapler.gd" id="1_5luih"]
+[ext_resource type="Texture2D" uid="uid://bnjgr0uwlh3f8" path="res://art/stapler.png" id="1_livpe"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jq10p"]
+radius = 12.0415945
+
+[node name="Stapler" type="Area2D" unique_id=1375770464]
+script = ExtResource("1_5luih")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=396330807]
+texture = ExtResource("1_livpe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1994378376]
+shape = SubResource("CircleShape2D_jq10p")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
