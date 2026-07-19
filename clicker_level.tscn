@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://dr2iou28eynlk"]
+
+[ext_resource type="Script" uid="uid://c1gybbbr457le" path="res://clicker_level.gd" id="1_jc0om"]
+[ext_resource type="Texture2D" uid="uid://88eu45135cr" path="res://art/gamebackground1.png" id="1_kdc7t"]
+[ext_resource type="PackedScene" uid="uid://cpxgewtqppv4y" path="res://minigame_timer.tscn" id="3_3hy10"]
+[ext_resource type="PackedScene" uid="uid://df85q0ksccj46" path="res://clickable_stapler.tscn" id="3_qtv7n"]
+
+[node name="ClickerLevel" type="Node2D" unique_id=1507428413]
+script = ExtResource("1_jc0om")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1701486069]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_kdc7t")
+
+[node name="MinigameTimer" parent="." unique_id=944453906 instance=ExtResource("3_3hy10")]
+time_left = 5.0
+
+[node name="ClickableStapler" parent="." unique_id=84113845 instance=ExtResource("3_qtv7n")]
+position = Vector2(15, 17)
+
+[node name="ClickableStapler2" parent="." unique_id=1244137741 instance=ExtResource("3_qtv7n")]
+position = Vector2(56, 95)
+
+[node name="ClickableStapler3" parent="." unique_id=1270667931 instance=ExtResource("3_qtv7n")]
+position = Vector2(110, 53)
+
+[node name="ClickableStapler4" parent="." unique_id=11398088 instance=ExtResource("3_qtv7n")]
+position = Vector2(106, 136)
+
+[node name="ClickableStapler5" parent="." unique_id=1183088995 instance=ExtResource("3_qtv7n")]
+position = Vector2(150, 104)
+
+[node name="ClickableStapler6" parent="." unique_id=535066722 instance=ExtResource("3_qtv7n")]
+position = Vector2(271, 152)
+
+[node name="ClickableStapler8" parent="." unique_id=1677290457 instance=ExtResource("3_qtv7n")]
+position = Vector2(221, 54)
+
+[node name="ClickableStapler9" parent="." unique_id=550280306 instance=ExtResource("3_qtv7n")]
+position = Vector2(215, 104)
+
+[connection signal="time_ran_out" from="MinigameTimer" to="." method="_on_minigame_timer_time_ran_out"]
+[connection signal="clicked" from="ClickableStapler" to="." method="_on_clickable_stapler_clicked"]
+[connection signal="clicked" from="ClickableStapler2" to="." method="_on_clickable_stapler_clicked"]
+[connection signal="clicked" from="ClickableStapler3" to="." method="_on_clickable_stapler_clicked"]
+[connection signal="clicked" from="ClickableStapler4" to="." method="_on_clickable_stapler_clicked"]
+[connection signal="clicked" from="ClickableStapler5" to="." method="_on_clickable_stapler_clicked"]
+[connection signal="clicked" from="ClickableStapler6" to="." method="_on_clickable_stapler_clicked"]
+[connection signal="clicked" from="ClickableStapler8" to="." method="_on_clickable_stapler_clicked"]
+[connection signal="clicked" from="ClickableStapler9" to="." method="_on_clickable_stapler_clicked"]

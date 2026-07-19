@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://df85q0ksccj46"]
+
+[ext_resource type="Script" uid="uid://ceq3up4lbay0" path="res://clickable_stapler.gd" id="1_2qwnn"]
+[ext_resource type="Texture2D" uid="uid://bnjgr0uwlh3f8" path="res://art/stapler.png" id="1_0151r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2qwnn"]
+size = Vector2(29, 15)
+
+[node name="ClickableStapler" type="Area2D" unique_id=84113845]
+script = ExtResource("1_2qwnn")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=610565485]
+texture = ExtResource("1_0151r")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=147905987]
+position = Vector2(13.5, 6.5)
+shape = SubResource("RectangleShape2D_2qwnn")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
