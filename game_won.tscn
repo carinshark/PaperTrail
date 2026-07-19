@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bv48u8gn2qw4"]
+
+[ext_resource type="Texture2D" uid="uid://b4mvn50qvbtnb" path="res://art/winScreen.png" id="1_glrca"]
+[ext_resource type="PackedScene" uid="uid://864pb1dn25gr" path="res://menu_return.tscn" id="2_0xiou"]
+
+[node name="GameWon" type="TextureRect" unique_id=1718620970]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_glrca")
+
+[node name="MenuReturn" parent="." unique_id=663030788 instance=ExtResource("2_0xiou")]
+layout_mode = 0
+offset_left = 183.0
+offset_top = 146.0
+offset_right = 314.0
+offset_bottom = 177.0

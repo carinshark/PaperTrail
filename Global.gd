@@ -17,7 +17,7 @@ func win():
 		
 		waiting_screen()
 	else:
-		print("win")
+		get_tree().change_scene_to_file("res://game_won.tscn")
 
 func play_level():
 		get_tree().change_scene_to_file(
@@ -28,7 +28,7 @@ func lose():
 	if lives>0:
 		waiting_screen()
 	else:
-		print("lost")
+		get_tree().change_scene_to_file("res://game_lost.tscn")
 
 func waiting_screen():
 	get_tree().change_scene_to_file(

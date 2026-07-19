@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://864pb1dn25gr"]
+
+[ext_resource type="Script" uid="uid://c2gqdanr8rq24" path="res://menu_return.gd" id="1_15l3o"]
+
+[node name="MenuReturn" type="Button" unique_id=663030788]
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Return to menu"
+script = ExtResource("1_15l3o")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
