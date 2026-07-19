@@ -12,20 +12,21 @@ offset_bottom = 180.0
 texture = ExtResource("2_ak2if")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Background" unique_id=1305343507]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -94.0
-offset_top = -87.0
-offset_right = 94.0
-offset_bottom = -23.0
+offset_left = -129.0
+offset_top = -78.0
+offset_right = 129.0
+offset_bottom = -14.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/outline_size = 20
-theme_override_font_sizes/normal_font_size = 30
+theme_override_font_sizes/normal_font_size = 32
 text = "Paper Trail"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -47,13 +48,11 @@ grow_vertical = 2
 [node name="Start" type="Button" parent="Background/VBoxContainer" unique_id=958337976]
 layout_mode = 2
 theme_override_constants/outline_size = 8
-theme_override_font_sizes/font_size = 12
 text = "Start Game"
 
 [node name="Quit" type="Button" parent="Background/VBoxContainer" unique_id=1170084895]
 layout_mode = 2
 theme_override_constants/outline_size = 8
-theme_override_font_sizes/font_size = 12
 text = "Quit"
 
 [connection signal="pressed" from="Background/VBoxContainer/Start" to="." method="_on_start_pressed"]

@@ -3,10 +3,9 @@ extends Node2D
 @onready var heart1=$Background/HeartContainer/Heart1
 @onready var heart2=$Background/HeartContainer/Heart2
 @onready var heart3=$Background/HeartContainer/Heart3
-@onready var heart4=$Background/HeartContainer/Heart4
-@onready var heart5=$Background/HeartContainer/Heart5
 
-@onready var all_hearts=[heart1,heart2,heart3,heart4,heart5]
+
+@onready var all_hearts=[heart1,heart2,heart3]
 
 @onready var level_label=$Background/Level
 @onready var timer_label=$Background/Timer
@@ -16,6 +15,7 @@ var time
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$Timer.start()
+	$Background/Level.text=Global.game_desc[Global.minigames_done]
 	
 
 

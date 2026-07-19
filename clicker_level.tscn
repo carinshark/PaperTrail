@@ -17,7 +17,7 @@ texture = ExtResource("1_kdc7t")
 time_left = 5.0
 
 [node name="ClickableStapler" parent="." unique_id=84113845 instance=ExtResource("3_qtv7n")]
-position = Vector2(15, 17)
+position = Vector2(53, 42)
 
 [node name="ClickableStapler2" parent="." unique_id=1244137741 instance=ExtResource("3_qtv7n")]
 position = Vector2(56, 95)

@@ -10,7 +10,7 @@ texture = ExtResource("1_glrca")
 
 [node name="MenuReturn" parent="." unique_id=663030788 instance=ExtResource("2_0xiou")]
 layout_mode = 0
-offset_left = 183.0
-offset_top = 146.0
-offset_right = 314.0
-offset_bottom = 177.0
+offset_left = 148.0
+offset_top = 145.0
+offset_right = 305.0
+offset_bottom = 176.0
