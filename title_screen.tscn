@@ -1,24 +1,15 @@
 [gd_scene format=3 uid="uid://ci476nvacxhm"]
 
 [ext_resource type="Script" uid="uid://btsksvi5rt7cd" path="res://title_screen.gd" id="1_v6p8y"]
-
-[sub_resource type="Gradient" id="Gradient_1s85s"]
-interpolation_mode = 1
-offsets = PackedFloat32Array(0, 0.075, 0.18, 0.28, 0.43, 0.545, 0.67, 0.78, 0.86, 0.93, 1)
-colors = PackedColorArray(0, 0.45043758, 1, 1, 0.058933277, 0.49165475, 1, 1, 0.14143987, 0.54935884, 1, 1, 0.22001755, 0.60431504, 1, 1, 0.3378841, 0.6867494, 1, 1, 0.42824847, 0.7499491, 1, 1, 0.52647054, 0.8186444, 1, 1, 0.612906, 0.87909627, 1, 1, 0.6757682, 0.92306125, 1, 1, 0.7111281, 0.9477915, 1, 1, 0.785777, 1, 1, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_v6p8y"]
-gradient = SubResource("Gradient_1s85s")
-fill = 1
-fill_from = Vector2(0.5, 0.5)
+[ext_resource type="Texture2D" uid="uid://bahymlt20xepa" path="res://art/TitleBackground.png" id="2_ak2if"]
 
 [node name="TitleScreen" type="Node2D" unique_id=1134448822]
 script = ExtResource("1_v6p8y")
 
 [node name="Background" type="TextureRect" parent="." unique_id=1993786386]
-offset_right = 1152.0
-offset_bottom = 648.0
-texture = SubResource("GradientTexture2D_v6p8y")
+offset_right = 320.0
+offset_bottom = 180.0
+texture = ExtResource("2_ak2if")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Background" unique_id=1305343507]
 layout_mode = 1
@@ -27,14 +18,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -405.0
-offset_top = -284.0
-offset_right = 405.0
-offset_bottom = -52.0
+offset_left = -94.0
+offset_top = -87.0
+offset_right = 94.0
+offset_bottom = -23.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/outline_size = 40
-theme_override_font_sizes/normal_font_size = 108
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/normal_font_size = 30
 text = "Paper Trail"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -46,29 +37,29 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -91.0
+offset_left = -48.0
 offset_top = -26.5
-offset_right = 91.0
-offset_bottom = 210.0
+offset_right = 48.0
+offset_bottom = 76.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Start" type="Button" parent="Background/VBoxContainer" unique_id=958337976]
 layout_mode = 2
-theme_override_constants/outline_size = 14
-theme_override_font_sizes/font_size = 32
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 12
 text = "Start Game"
 
 [node name="Settings" type="Button" parent="Background/VBoxContainer" unique_id=488929907]
 layout_mode = 2
-theme_override_constants/outline_size = 14
-theme_override_font_sizes/font_size = 32
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 12
 text = "Settings"
 
 [node name="Quit" type="Button" parent="Background/VBoxContainer" unique_id=1170084895]
 layout_mode = 2
-theme_override_constants/outline_size = 14
-theme_override_font_sizes/font_size = 32
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 12
 text = "Quit"
 
 [connection signal="pressed" from="Background/VBoxContainer/Start" to="." method="_on_start_pressed"]

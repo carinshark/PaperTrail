@@ -1,3 +1,79 @@
 [gd_scene format=3 uid="uid://bwuwwpt86uxrb"]
 
+[ext_resource type="Script" uid="uid://1pe6vjxhi5c3" path="res://level_scene.gd" id="1_3mivm"]
+[ext_resource type="Texture2D" uid="uid://biwk0h5yalqyj" path="res://art/LevelBackground.png" id="1_4quuv"]
+[ext_resource type="Texture2D" uid="uid://drwlius2qqnox" path="res://art/Heart.png" id="2_187gu"]
+
 [node name="LevelScene" type="Node2D" unique_id=1667358875]
+script = ExtResource("1_3mivm")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1901876288]
+offset_right = 320.0
+offset_bottom = 180.0
+texture = ExtResource("1_4quuv")
+
+[node name="HeartContainer" type="HBoxContainer" parent="Background" unique_id=1478839471]
+layout_mode = 0
+offset_right = 320.0
+offset_bottom = 40.0
+alignment = 1
+
+[node name="Heart1" type="TextureRect" parent="Background/HeartContainer" unique_id=271976393]
+layout_mode = 2
+texture = ExtResource("2_187gu")
+
+[node name="Heart2" type="TextureRect" parent="Background/HeartContainer" unique_id=22229189]
+layout_mode = 2
+texture = ExtResource("2_187gu")
+
+[node name="Heart3" type="TextureRect" parent="Background/HeartContainer" unique_id=51389885]
+layout_mode = 2
+texture = ExtResource("2_187gu")
+
+[node name="Heart4" type="TextureRect" parent="Background/HeartContainer" unique_id=404399267]
+layout_mode = 2
+texture = ExtResource("2_187gu")
+
+[node name="Heart5" type="TextureRect" parent="Background/HeartContainer" unique_id=2096537681]
+layout_mode = 2
+texture = ExtResource("2_187gu")
+
+[node name="Level" type="RichTextLabel" parent="Background" unique_id=1825370523]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -155.0
+offset_top = -12.0
+offset_right = 155.0
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Level1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="RichTextLabel" parent="Background" unique_id=1462858975]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.0
+offset_top = 60.0
+offset_right = 35.0
+offset_bottom = 84.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "0.0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="." unique_id=1794648056]
+wait_time = 3.0
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
